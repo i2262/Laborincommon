@@ -137,7 +137,7 @@ public class GenerateDeepZoomService : IGenerateDeepZoomService
 
         //Если запрос нам возвращает одно значение (надо быть уверенным что запрос вернёт именно одно значение иначе будет ошибка)./////???
 
-        // запросим номер полдзователя создаюшего статью
+        // запросим номер пользователя создающего статью
         query = "SELECT created_by FROM jos_content WHERE new = 0;";
         myCommand = new SqlCommand(query, myConnection);
         znachenie = myCommand.ExecuteScalar().ToString();
@@ -431,7 +431,7 @@ public class GenerateDeepZoomService : IGenerateDeepZoomService
 
     }
     /// <summary>
-    ///- изменеие аватарки
+    ///- изменение аватарки
     /// </summary>
     private void UserAvatarChange(SqlConnection myConnection)// - создание аватарки
     {
